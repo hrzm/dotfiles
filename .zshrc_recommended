@@ -195,18 +195,18 @@ alias gcheo='git checkout'
 alias gpull='git pull'
  
  
-#LIBS2='/Users/hiro/Developer/C++/LIBS'
-IP_CV='/Users/hiro/local/opencv245/build'
-IP_BOOST='/Users/hiro/Developer/C++/LIBS/boost_1_57_0/include'
-IP_MP='/Users/hiro/Developer/C++/LIBS/libomp_oss/build'
+#LIBS2='$HOME/Developer/C++/LIBS'
+IP_CV=$HOME/local/opencv245/build
+IP_BOOST=$HOME/local/boost_1_57_0/include
+IP_MP=$HOME/local/libomp_oss/build
 
-LP_CV='/Users/hiro/local/opencv245/build/lib'
-LP_BOOST='/Users/hiro/Developer/C++/LIBS/boost_1_57_0/lib'
-LP_MP='/Users/hiro/Developer/C++/LIBS/libomp_oss/build'
+LP_CV=$HOME/local/opencv245/build/lib
+LP_BOOST=$HOME/local/boost_1_57_0/libs
+LP_MP=$HOME/local/libomp_oss/build
 
-PKG_CONFIG_PATH=/Users/hiro/local/opencv245/build/unix-install:$PGK_CONFIG_PATH
+PKG_CONFIG_PATH=$HOME/local/opencv245/build/unix-install:$PGK_CONFIG_PATH
 export PKG_CONFIG_PATH
-DYLD_FALLBACK_LIBRARY_PATH=/Users/hiro/local/opencv245/build/lib:$DYLD_FALLBACK_LIBRARY_PATH
+DYLD_FALLBACK_LIBRARY_PATH=$HOME/local/opencv245/build/lib:$DYLD_FALLBACK_LIBRARY_PATH
 export DYLD_FALLBACK_LIBRARY_PATH
 
 #CV_LIB='--whole-archive -llibopencv_calib3d.a -llibopencv_contrib.a -llibopencv_core.a -llibopencv_features2d.a -llibopencv_flann.a -llibopencv_gpu.a -llibopencv_haartraining_engine.a -llibopencv_highgui.a -llibopencv_imgproc.a -llibopencv_legacy.a -llibopencv_ml.a -llibopencv_nonfree.a -llibopencv_objdetect.a -llibopencv_photo.a -llibopencv_stitching.a -llibopencv_superres.a -llibopencv_ts.a -llibopencv_video.a -llibopencv_videostab.a'
@@ -215,23 +215,23 @@ export DYLD_FALLBACK_LIBRARY_PATH
 #alias gcc='gcc -I$IP_CV -I$IP_BOOST -I$IP_MP -L$LP_CV -L$LP_BOOST -L$LP_MP'
 
 # g++ alias
-alias gCv++='g++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP /Users/hiro/ownCloud/programing/Library/opencv-2.4.7/build/lib/cv2.so'
-alias gGl++='g++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP -framework GLUT -framework OpenGL -Wno-deprecated'
-alias gMp++='g++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP -lm /Users/hiro/Developer/C++/LIBS/libomp_oss/build/libiomp5.dylib -fopenmp'
-alias gAll++='g++ -I$IP_CV -I$IP_BOOST -I$IP_MP -L$LP_CV -L$LP_BOOST -L$LP_MP -lm /Users/hiro/Developer/C++/LIBS/libomp_oss/build/libiomp5.dylib -framework GLUT -framework OpenGL -Wno-deprecated `pkg-config --libs --cflags opencv`' 
+#alias gCv++='g++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP $HOME/ownCloud/programing/Library/opencv-2.4.7/build/lib/cv2.so'
+#alias gGl++='g++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP -framework GLUT -framework OpenGL -Wno-deprecated'
+#alias gMp++='g++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP -lm $HOME/Developer/C++/LIBS/libomp_oss/build/libiomp5.dylib -fopenmp'
+alias gAll++='g++ -I$IP_CV -I$IP_BOOST -I$IP_MP -L$LP_CV -L$LP_BOOST -L$LP_MP -lm $HOME/local/libomp_oss/build/libiomp5.dylib -framework GLUT -framework OpenGL -Wno-deprecated `pkg-config --libs --cflags opencv`' 
 
 # clang++ alias
-alias clangCv++='clang++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP /Users/hiro/ownCloud/programing/Library/opencv-2.4.7/build/lib/cv2.so'
-alias clangGl++='clang++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP -framework GLUT -framework OpenGL -Wno-deprecated'
-alias clangMp++='clang++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP -lm /Users/hiro/Developer/C++/LIBS/libomp_oss/build/libiomp5.dylib -fopenmp'
-alias clangAll++='clang++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP /Users/hiro/ownCloud/programing/Library/opencv-2.4.7/build/lib/cv2.so -lm /Users/hiro/Developer/C++/LIBS/libomp_oss/build/libiomp5.dylib -framework GLUT -framework OpenGL -Wno-deprecated'
+#alias clangCv++='clang++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP $HOME/ownCloud/programing/Library/opencv-2.4.7/build/lib/cv2.so'
+#alias clangGl++='clang++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP -framework GLUT -framework OpenGL -Wno-deprecated'
+#alias clangMp++='clang++ -I$IP_CV:$IP_BOOST:$IP_MP -L$LP_CV:$LP_BOOST:$LP_MP -lm $HOME/Developer/C++/LIBS/libomp_oss/build/libiomp5.dylib -fopenmp'
+alias clangAll++='clang++ -I$IP_CV -I$IP_BOOST -I$IP_MP -L$LP_CV -L$LP_BOOST -L$LP_MP -lm $HOME/local/libomp_oss/build/libiomp5.dylib -framework GLUT -framework OpenGL -Wno-deprecated `pkg-config --libs --cflags opencv`'
 
 # alias for study
 alias projc='gAll++ SearchMap.cpp CreateMap.cpp NearBits.cpp NearL2More.cpp MapIO.cpp Global.cpp DisplayMaps.cpp'
 alias matchc='gAll++ MatchMaps.cpp CalcXor.cpp Global.cpp MapIO.cpp NearBits.cpp CreateFragMap.cpp'
 alias m2='gAll++ MatchMaps.cpp CalcXor.cpp Global.cpp MapIO.cpp NearBits.cpp NearL2More.cpp CreateFragMap.cpp Matching.cpp'
 alias dispc='gAll++ Display.cpp Global.cpp MapIO.cpp'
-alias cdp='cd /Users/hiro/Developer/C++/SearchMap/src'
+alias cdp='cd $HOME/Developer/C++/SearchMaps/src'
 
 alias vimzsh='vim ~/.zshrc'
 alias vimbash'vim ~/.bash_profile'
